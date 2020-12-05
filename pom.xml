@@ -127,10 +127,6 @@
                         <quiet>true</quiet>
                         <detectLinks>false</detectLinks>
                         <detectOfflineLinks>false</detectOfflineLinks>
-                        <additionalOptions>
-                            <additionalOption>-Xdoclint:none</additionalOption>
-                            <additionalOption>--base-dir ${project.basedir}</additionalOption>
-                        </additionalOptions>
                         <groups>
                             <group>
                                 <!--<title>API</title>-->
@@ -138,15 +134,6 @@
                                 <packages>com.buschmais.jqassistant.plugin.${project.artifactId}.api*</packages>
                             </group>
                         </groups>
-
-                        <source>1.8</source>
-                        <doclet>org.asciidoctor.Asciidoclet</doclet>
-                        <docletArtifact>
-                            <groupId>org.asciidoctor</groupId>
-                            <artifactId>asciidoclet</artifactId>
-                            <version>1.5.4</version>
-                        </docletArtifact>
-                        <!--<overview>src/main/java/overview.adoc</overview>-->
                     </configuration>
                 </plugin>
 
@@ -483,8 +470,8 @@
 
             <dependency>
                 <groupId>org.hamcrest</groupId>
-                <artifactId>java-hamcrest</artifactId>
-                <version>2.0.0.0</version>
+                <artifactId>hamcrest</artifactId>
+                <version>2.2</version>
                 <scope>test</scope>
             </dependency>
 
@@ -545,8 +532,8 @@
         </dependency>
         <!-- Test -->
         <dependency>
-            <groupId>com.buschmais.jqassistant.neo4jserver</groupId>
-            <artifactId>neo4jv3</artifactId>
+            <groupId>com.buschmais.jqassistant.neo4j</groupId>
+            <artifactId>embedded</artifactId>
             <version>${jqa-neo4jbackend.version}</version>
             <scope>test</scope>
         </dependency>
